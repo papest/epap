@@ -1,7 +1,7 @@
 package model;
 
 class Kotik {
-// Класс котик
+    // Класс котик
     private int h = 6;
     private int i;
     private int fullness = 2;
@@ -25,12 +25,9 @@ class Kotik {
         count++;
     }
     
-    
-
 private boolean play () {
 // Метод play
-    
-   if (fullness>0 )
+    if (fullness>0 )
    {
     fullness--;
        System.out.println ("Котик играет!");
@@ -65,7 +62,7 @@ private boolean chaseMouse() {
     
     private void eat( int incFullness )
     {
-// Метод eat
+    // Метод eat
         fullness += incFullness;
    //System.out.println("Котик ест!"+fullness+" "+incFullness+" ");
         System.out.println("Котик ест!");
@@ -73,20 +70,17 @@ private boolean chaseMouse() {
     
     
    private void eat( int incFullness, String food )
-    {
-        // Метод eat
+   {
+       // Метод eat
         fullness += incFullness;
-       // System.out.println("Котик ест"+ food + "!" + fullness+" "+incFullness+" ");
         System.out.println("Котик ест"+ food + "!");
-    }
+   }
 
 
 private void eat() {
 // Метод eat
     eat( 1, " что-то ");
- //   System.out.println ("Котик ест!"+fullness+" ");
-    
-}
+    }
 
 
 private boolean sharpensItsClaws(){
@@ -102,155 +96,103 @@ private boolean sharpensItsClaws(){
 
     }
     
-private boolean meow(){
-        // Метод meow
+private boolean meow( ){
+// Метод meow
     if (fullness>0 )
     {
         fullness--;
         System.out.println ("Котик мяукает!");
     return true;
-}
+    }
     else return false;
-
     }
     
     public String getName() {
-    
         // Сообщить имя
-        
         return name;
     }
     
     public void setName(String name) {
-        
         // Присвоить имя
-        
         this.name = name;
     }
+
     public String getMeow() {
-        
         // Сообщить мяв
-        
         return meow;
     }
     
     public void setMeow(String meow) {
-        
         // Присвоить мяв
-        
         this.meow = meow;
         System.out.println (" "+ meow);
     }
 
-    
     public int getPrettiness() {
-        
         // Узнать миловидность
-        
         return  prettiness;
     }
     
     public void setPrettiness(int prettiness) {
-        
         // Присвоить миловидность
-        
         this.prettiness =  prettiness;
     }
     
     public int getWeight() {
-        
         //Узнать вес
-        
         return weight;
     }
     
     public void setWeight(int weight) {
-        
         //Присвоить вес
-        
         this.weight = weight;
     }
+
     public void setKotik(int prettiness, String name, int weight, String meow) {
-        
         //Инициализировать параметры
         this.meow = meow;
         this.name = name;
         this.weight = weight;
         this.prettiness = prettiness;
     }
-    
-    
-public void  liveAnotherDay() {
-// Метод liveAnotherDay
+
+    public void  liveAnotherDay() {
+    // Метод liveAnotherDay
     System.out.println (" Еще один день Котика");
-// 24 дела Котика
-    for( i = 0; i < 24 ; i++)
-    {
-       
-    int k = (int)(Math.random()*h+1);
-    // System.out.print ("i = "+ i +" k = "+ k + " ");
+    // 24 дела Котика
+    for( i = 0; i < 24 ; i++) {
+        int k = (int)(Math.random()*h+1);
         System.out.print ("i = "+ i +" ");
-
-   switch(k) {
-           
-    case 1 :
-     if (!play () )
-    
-     { eat();
-     }
-    break;
-           
-    case 2 :
-           if (!sleep())
-               
-           { eat();
-           }
-    break;
-           
-    case 3 :
-           if (!chaseMouse() )
-               
-           { eat();
-           }
-
-    
-     break;
-    case 4 :
-           if ( !sharpensItsClaws())
-               
-           { eat();
-           }
-   
-     break;
-    case 5 :
-    eat();
-    break;
-    case 6 :
-           if ( !meow() )
-               
-           { eat();
-           }
-
-           
-    
-    break;
-
-        }
-     //   System.out.println(" k = "+ k + " ");
-    
-                
+        switch(k) {
+            case 1 :
+                if (!play () )
+                { eat();
+                }
+        break;
+            case 2 :
+                if (!sleep())
+                { eat();
+                }
+        break;
+            case 3 :
+                if (!chaseMouse() )
+                { eat();
+                }
+        break;
+            case 4 :
+                if ( !sharpensItsClaws())
+                { eat();
+                }
+        break;
+            case 5 :
+                eat();
+        break;
+            case 6 :
+                if ( !meow() )
+                { eat();
+                }
+        break;
+                 }
+                           }
+                               }
     }
-    
-    }
-
-
-
-public static void main( String[] args) {
-
-
-   Kotik kotik = new Kotik();
-    kotik.setMeow("Мяу");
-    kotik.liveAnotherDay();
-
-}
-}
