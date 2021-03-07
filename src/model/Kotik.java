@@ -21,90 +21,82 @@ public class Kotik {
     }
     public Kotik () {
         // Конструктор без параметров
-        setKotik(prettiness, name, weight, meow);
         count++;
     }
     
     private boolean play () {
-    // Метод play
-    if (fullness>0 )
-    {
-    fullness--;
-       System.out.println ("Котик играет!");
-       return true;
-    }
-    else return false;
+        // Метод play
+        if (fullness>0 ){
+            fullness--;
+            System.out.println ("Котик играет!");
+            return true;
+        }else
+            return false;
     }
 
     private boolean sleep() {
-    // Метод sleep
+         // Метод sleep
     
-    if (fullness>0 )
-    {
-        fullness--;
-    System.out.println ("Котик спит!");
-        return true;
-    }
-    else return false;
+         if (fullness>0 ){
+            fullness--;
+            System.out.println ("Котик спит!");
+            return true;
+         }else
+            return false;
 
     }
 
-    private boolean chaseMouse() {
-    // Метод chaseMouse
-    if (fullness>0 )
+    private boolean chaseMouse()
     {
-        fullness--;
-    System.out.println ("Котик ловит мышь!");
-        return true;
-    }
-    else return false;
+       // Метод chaseMouse
+       if (fullness>0 ){
+           fullness--;
+           System.out.println ("Котик ловит мышь!");
+           return true;
+       }else
+           return false;
     }
     
     private void eat( int incFullness )
     {
-    // Метод eat
+        // Метод eat
         fullness += incFullness;
-   //System.out.println("Котик ест!"+fullness+" "+incFullness+" ");
         System.out.println("Котик ест!");
     }
     
     
    private void eat( int incFullness, String food )
    {
-       // Метод eat
+        // Метод eat
         fullness += incFullness;
         System.out.println("Котик ест"+ food + "!");
    }
 
 
    private void eat() {
-   // Метод eat
-    eat( 1, " что-то ");
-    }
+        // Метод eat
+        eat( 1, " что-то ");
+   }
 
 
    private boolean sharpensItsClaws(){
-   // Метод sharpensItsClaws
-    if (fullness>0 )
-    {
-        fullness--;
-
-    System.out.println ("Котик точит ногти!");
-        return true;
-    }
-    else return false;
-
-    }
+        // Метод sharpensItsClaws
+        if (fullness>0 ){
+          fullness--;
+          System.out.println ("Котик точит ногти!");
+          return true;
+        }else
+          return false;
+   }
     
     private boolean meow( ){
-    // Метод meow
-    if (fullness>0 )
-    {
-        fullness--;
-        System.out.println ("Котик мяукает!");
-    return true;
-    }
-    else return false;
+        // Метод meow
+        if (fullness>0 ){
+           fullness--;
+           System.out.println ("Котик мяукает!");
+           return true;
+        }else
+           return false;
     }
     
     public String getName() {
@@ -119,7 +111,7 @@ public class Kotik {
 
     public int getPrettiness() {
         // Узнать миловидность
-        return  prettiness;
+        return prettiness;
     }
     
     public int getWeight() {
@@ -128,50 +120,50 @@ public class Kotik {
     }
 
     public void setKotik(int prettiness, String name, int weight, String meow) {
-        //Инициализировать параметры
-        this.meow = meow;
-        this.name = name;
-        this.weight = weight;
-        this.prettiness = prettiness;
+         //Инициализировать параметры
+         this.meow = meow;
+         this.name = name;
+         this.weight = weight;
+         this.prettiness = prettiness;
     }
 
     public void  liveAnotherDay() {
-    // Метод liveAnotherDay
-    System.out.println (" Еще один день Котика");
-    // 24 дела Котика
-    for( i = 0; i < 24 ; i++) {
-        int k = (int)(Math.random()*h+1);
-        System.out.print ("i = "+ i +" ");
-        switch(k) {
-            case 1 :
-                if (!play () )
-                { eat();
+         // Метод liveAnotherDay
+         System.out.println (" Еще один день Котика");
+         // 24 дела Котика
+         for( i = 0; i < 24 ; i++) {
+            int k = (int)(Math.random()*h+1);
+            System.out.print ("i = "+ i +" ");
+            switch(k) {
+              case 1 :
+                if (!play () ){
+                    eat();
                 }
-        break;
-            case 2 :
-                if (!sleep())
-                { eat();
+                break;
+              case 2 :
+                if (!sleep()){
+                    eat();
                 }
-        break;
-            case 3 :
-                if (!chaseMouse() )
-                { eat();
+                break;
+              case 3 :
+                if (!chaseMouse() ){
+                    eat();
                 }
-        break;
-            case 4 :
-                if ( !sharpensItsClaws())
-                { eat();
+                break;
+              case 4 :
+                if ( !sharpensItsClaws() ){
+                    eat();
                 }
-        break;
-            case 5 :
+                break;
+              case 5 :
                 eat();
-        break;
-            case 6 :
-                if ( !meow() )
-                { eat();
+                break;
+              case 6 :
+                if ( !meow() ){
+                     eat();
                 }
-        break;
+                break;
                  }
-    }
+         }
     }
 }

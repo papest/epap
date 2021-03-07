@@ -11,13 +11,14 @@ public class Application {
         String str1 = kotik1.getMeow();
         String str2 = kotik.getMeow();
 
-        if (str1.equals(str2)) {
+        if (str1.equals(str2)){
             System.out.println("Это одинаковые Мяу!");
-        } else {System.out.println("Это разные Мяу!");
-
+        }else {
+            System.out.println("Это разные Мяу!");
         }
+
         kotik1.liveAnotherDay();
-       System.out.println("Число созданных котов: " + Kotik.count);
+        System.out.println("Число созданных котов: " + Kotik.count);
 
     }
 }
