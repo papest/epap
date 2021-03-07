@@ -1,11 +1,11 @@
 package model;
 
-class Kotik {
-    // Класс котик
+public class Kotik {
+// Класс котик
     private int h = 6;
     private int i;
     private int fullness = 2;
-    static int count = 0;
+    public static int count = 0;
     private String name;
     private String meow;
     private int prettiness;
@@ -25,19 +25,19 @@ class Kotik {
         count++;
     }
     
-private boolean play () {
-// Метод play
+    private boolean play () {
+    // Метод play
     if (fullness>0 )
-   {
+    {
     fullness--;
        System.out.println ("Котик играет!");
        return true;
-   }
-   else return false;
-}
+    }
+    else return false;
+    }
 
-private boolean sleep() {
-// Метод sleep
+    private boolean sleep() {
+    // Метод sleep
     
     if (fullness>0 )
     {
@@ -47,10 +47,10 @@ private boolean sleep() {
     }
     else return false;
 
-}
+    }
 
-private boolean chaseMouse() {
-// Метод chaseMouse
+    private boolean chaseMouse() {
+    // Метод chaseMouse
     if (fullness>0 )
     {
         fullness--;
@@ -58,7 +58,7 @@ private boolean chaseMouse() {
         return true;
     }
     else return false;
-}
+    }
     
     private void eat( int incFullness )
     {
@@ -77,14 +77,14 @@ private boolean chaseMouse() {
    }
 
 
-private void eat() {
-// Метод eat
+   private void eat() {
+   // Метод eat
     eat( 1, " что-то ");
     }
 
 
-private boolean sharpensItsClaws(){
-// Метод sharpensItsClaws
+   private boolean sharpensItsClaws(){
+   // Метод sharpensItsClaws
     if (fullness>0 )
     {
         fullness--;
@@ -96,8 +96,8 @@ private boolean sharpensItsClaws(){
 
     }
     
-private boolean meow( ){
-// Метод meow
+    private boolean meow( ){
+    // Метод meow
     if (fullness>0 )
     {
         fullness--;
@@ -111,21 +111,10 @@ private boolean meow( ){
         // Сообщить имя
         return name;
     }
-    
-    public void setName(String name) {
-        // Присвоить имя
-        this.name = name;
-    }
 
     public String getMeow() {
         // Сообщить мяв
         return meow;
-    }
-    
-    public void setMeow(String meow) {
-        // Присвоить мяв
-        this.meow = meow;
-        System.out.println (" "+ meow);
     }
 
     public int getPrettiness() {
@@ -133,19 +122,9 @@ private boolean meow( ){
         return  prettiness;
     }
     
-    public void setPrettiness(int prettiness) {
-        // Присвоить миловидность
-        this.prettiness =  prettiness;
-    }
-    
     public int getWeight() {
         //Узнать вес
         return weight;
-    }
-    
-    public void setWeight(int weight) {
-        //Присвоить вес
-        this.weight = weight;
     }
 
     public void setKotik(int prettiness, String name, int weight, String meow) {
@@ -193,6 +172,6 @@ private boolean meow( ){
                 }
         break;
                  }
-                           }
-                               }
     }
+    }
+}
