@@ -30,8 +30,11 @@ public class Kotik {
             fullness--;
             System.out.println ("Котик играет!");
             return true;
-        }else
+        }else{
+
+            System.out.println ("Кот не играет - кот голодает!");
             return false;
+        }
     }
 
     private boolean sleep() {
@@ -41,8 +44,10 @@ public class Kotik {
             fullness--;
             System.out.println ("Котик спит!");
             return true;
-         }else
-            return false;
+         }else {
+             System.out.println("Коту не до сна - нужна еда!");
+             return false;
+         }
 
     }
 
@@ -53,8 +58,9 @@ public class Kotik {
            fullness--;
            System.out.println ("Котик ловит мышь!");
            return true;
-       }else
-           return false;
+       }else{
+           System.out.println ("Мышь не догнал - от голода упал!");
+           return false; }
     }
     
     private void eat( int incFullness )
@@ -85,18 +91,22 @@ public class Kotik {
           fullness--;
           System.out.println ("Котик точит ногти!");
           return true;
-        }else
-          return false;
+        }else{
+            System.out.println ("Коту не до педикюра - когда голодна натура!");
+            return false;
+        }
    }
     
-    private boolean meow( ){
+    private boolean meow(){
         // Метод meow
         if (fullness>0 ){
            fullness--;
            System.out.println ("Котик мяукает!");
            return true;
-        }else
-           return false;
+        }else{
+            System.out.println ("Не мяукаю, а от голода ору!");
+            return false;
+        }
     }
     
     public String getName() {
